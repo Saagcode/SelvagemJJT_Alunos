@@ -1,13 +1,13 @@
 import '@fortawesome/fontawesome-free/css/all.css';
-import logoSelvagem from '../../../public/images/logoSelvagem.png';
+import logoSelvagem from '../../public/images/logoSelvagem.png';
 import './home.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import kimono_profile from '../../../public/images/kimono-profile.png'
-import kimono_profile_2 from '../../../public/images/kimono-profile_2.png'
+import kimono_profile from '../../public/images/kimono-profile.png'
+import kimono_profile_2 from '../../public/images/kimono-profile_2.png'
 import '../media-queries/home_media-queries.css'
 
 function Home() {
