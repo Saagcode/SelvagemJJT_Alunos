@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import logoSelvagem from '../../../public/images/logoSelvagem.png';
+import logoSelvagem from '../../public/images/logoSelvagem.png';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './login.css';
 import '../media-queries/login_media-queries.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import kimono from '../../../public/images/kimono.png';
+import kimono from '../../public/images/kimono.png';
 import Swal from 'sweetalert2';
 import { ScaleLoader } from 'react-spinners';
 import { useNavigate} from 'react-router-dom';
