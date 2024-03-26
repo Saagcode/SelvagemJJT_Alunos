@@ -84,6 +84,7 @@ function Login() {
                     <img
                         src={logoSelvagem}
                         alt="logotipo"
+                        className='logo-selvagem'
                     />
                 </div>
             </section>
