@@ -1,0 +1,447 @@
+:root {
+    background: linear-gradient(90deg, #ececec 30%, #cecece 90%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.section-menu_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(50deg, #ffffff98, #ffffff64);
+    border: 1px solid #cecece62;
+}
+
+.container-logout {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.text_exit {
+    font-size: 7pt;
+    position: absolute;
+    margin-top: 30px;
+    align-items: center;
+    animation: opt 1s linear ;
+}
+
+@keyframes opt {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn_exit {
+    border-radius: 50px;
+    background-color: #e0e0e057;
+    border: none;
+}
+
+.fa-door-closed {
+    margin: 5px 0;
+    color: #FFBB00;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.fa-door-open {
+    margin: 5px 0;
+    padding: 5px;
+    color: #FFBB00;
+    cursor: pointer;
+}
+
+.grid-menu_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: auto;
+    border-bottom: 1px #cecece62 solid;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.elipsis-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --bounce-1: 0ms;
+    --bounce-2: 100ms;
+    --bounce-3: 200ms;
+    cursor: pointer;
+}
+
+.elipsis-menu_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --bounce-1: 0ms;
+    --bounce-2: 100ms;
+    --bounce-3: 200ms;
+    cursor: pointer;
+}
+
+.elipsis-menu_2 .ball {
+    background-color: #FFBB00;
+    transition: 0.4s;
+}
+
+.elipsis-menu_2:hover .ball:nth-child(1) {
+    animation: bounce 0.6s linear var(--bounce-1);
+}
+
+.elipsis-menu_2:hover .ball:nth-child(2) {
+    animation: bounce 0.6s linear var(--bounce-2);
+}
+
+.elipsis-menu_2:hover .ball:nth-child(3) {
+    animation: bounce 0.6s linear var(--bounce-3);
+}
+
+.elipsis-menu:hover .ball:nth-child(1) {
+    animation: bounce 0.6s linear var(--bounce-1);
+}
+
+.elipsis-menu:hover .ball:nth-child(2) {
+    animation: bounce 0.6s linear var(--bounce-2);
+}
+
+.elipsis-menu:hover .ball:nth-child(3) {
+    animation: bounce 0.6s linear var(--bounce-3);
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 0.4;
+        transform: translateY(0px);
+    }
+
+    33% {
+        opacity: 0.8;
+        transform: translateY(-5px);
+    }
+
+    66% {
+        opacity: 0.4;
+        transform: translateY(0px);
+    }
+}
+
+.ball {
+    background-color: #000;
+    border-radius: 50px;
+    width: 5px;
+    height: 5px;
+    margin: 3px;
+    transition: 0.4s;
+    transform: translateY(0px);
+}
+
+.learner-name {
+    color: rgb(0, 0, 0);
+    align-items: center;
+    margin: 0 auto;
+    font-size: 8pt;
+}
+
+.container-logo {
+    display: flex;
+    margin: 10px auto;
+}
+
+.logo-jjt {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.grid-menu_content ul {
+    list-style: none;
+    width: 55%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 8pt;
+    border: 1px #cecece62 solid;
+    background-color: #FFBB00;
+    color: #fff;
+    border-left: none;
+    padding: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.grid-menu_content ul:hover {
+    background-color: transparent;
+    color: #000;
+    transition: 0.5s;
+}
+
+.grid-menu_content li {
+    transition: 0.5s;
+    text-align: center;
+    margin: auto 0;
+}
+
+.next-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-class h1 {
+    font-size: 8pt;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section_learner-area {
+    display: flex;
+    font-size: 9pt;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin: 0px 20px 20px 20px;
+    padding: 2px 20px;
+    overflow-y: scroll;
+}
+
+.scroll-classes {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.class-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.class-history h1 {
+    margin: 10px 0 0 0;
+}
+
+.history-schedules {
+    border-bottom: #cecece9a dashed 1px;
+}
+
+.info-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    border-top: #cecece62 solid 1px;
+    width: 100%;
+}
+
+.feedback-sensei-box {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #cecece62;
+    background-color: transparent;
+    color: #000;
+    font-size: 13pt;
+}
+
+.modal-backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backdrop-opacity 1s linear forwards;
+}
+
+@keyframes backdrop-opacity {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(3px);
+    }
+}
+
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: auto;
+    margin: 10px 20px;
+    height: auto;
+    background: linear-gradient(50deg, transparent, #ffffff64);
+    border: 1px solid #cecece62;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    animation: dialog-opacity 0.5s linear forwards;
+    padding: 20px;
+}
+
+@keyframes dialog-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container-cancel-btn {
+    display: flex;
+    position: absolute;
+    justify-content: end;
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    font-size: 15pt;
+    top: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.container-cancel-btn:hover {
+    opacity: 0.6;
+}
+
+.container-kimono-profile {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.kimono-profile {
+    width: 50%;
+    margin: 10px 0;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.100);
+    border-radius: 70px;
+}
+
+.kimono-profile_2 {
+    width: 50%;
+    margin: 10px 0;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.100);
+    border-radius: 70px;
+    animation: animate-kimono_2 2s linear forwards;
+}
+
+@keyframes animate-kimono_2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.section-schedule_class {
+    display: flex;
+    flex-direction: column;
+}
+
+.tomorrow {
+    margin: 0 6px 0 0;
+    accent-color: #ffbb00;
+}
+
+.today {
+    margin: 0 6px 0 0;
+    accent-color: #ffbb00;
+}
+
+.radio-input label {
+    margin: 2px 0px 20px 0px;
+    font-size: 11pt;
+}
+
+.title-date {
+    font-size: 12pt;
+    margin: 2px 0px 20px 0px;
+}
+
+.title-schedule {
+    font-size: 12pt;
+    margin: 2px 0px 20px 0px;
+}
+
+.radio-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedules {
+    overflow-y: scroll;
+    height: 190px;
+}
+
+.schedules-default {
+    cursor: pointer;
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid #cecece93;
+    margin: 15px 8px;
+    text-align: center;
+    color: #ffd45e;
+    font-weight: 400;
+    transition: 0.5s;
+}
+
+.schedules-default:hover {
+    border: 1px solid #f9f9f9;
+}
+
+.schedules-change {
+    cursor: pointer;
+    padding: 8px;
+    margin: 15px 8px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    background-color: #ffbb00;
+    transition: 0.5s;
+}
+
+.container-confirm-btn {
+    display: flex;
+    position: absolute;
+    justify-content: end;
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    font-size: 15pt;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    color: #FFBB00;
+}
+
+.container-confirm-btn h1 {
+    font-size: 8pt;
+    align-items: center;
+    margin: 3px 5px;
+    transition: 0.5s;
+}

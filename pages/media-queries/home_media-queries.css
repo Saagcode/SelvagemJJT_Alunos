@@ -1,0 +1,95 @@
+@media screen and (min-width: 768px) {
+    .section-menu_container {
+        width: 50%;
+    }
+
+    .section_learner-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100%/1);
+    }
+
+    .class-history {
+        width: 100%;
+        height: 100%;
+    }
+
+    .scroll-classes {
+        overflow-y: scroll;
+        height: 30%;
+    }
+
+    .info-history {
+        border: none;
+    }
+
+    .feedback-sensei-box {
+        width: 50%;
+    }
+
+    .modal-dialog {
+        display: flex;
+        flex-direction: column;
+        width: calc(100%/2);
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    .section-schedule_class {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .container-kimono-profile {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -10;
+        opacity: 0.3;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .kimono-profile {
+        width: 20%;
+        margin: 10px 0;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.100);
+        border-radius: 70px;
+    }
+
+    .kimono-profile_2 {
+        width: 20%;
+        margin: 10px 0;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.100);
+        border-radius: 70px;
+        animation: animate-kimono_2 2s linear forwards;
+    }
+
+    .title-date {
+        text-align: center;
+    }
+
+    .title-schedule {
+        text-align: center;
+    }
+
+    .radio-input label {
+        text-align: center;
+    }
+
+    .schedules {
+        width: 98%;
+    }
+
+    .schedules-default {
+        width: 80%;
+        margin: 15px auto;
+    }
+    
+    .schedules-change {
+        width: 80%;
+        margin: 15px auto;
+    }
+}
