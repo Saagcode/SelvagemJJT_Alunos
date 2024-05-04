@@ -1,5 +1,5 @@
 :root {
-  font-family: 'K2D', sans-serif;
+  font-family: "K2D", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -41,5 +41,9 @@ html {
 }
 
 a {
+  color: #ffffff;
+}
+
+Link {
   color: #ffffff;
 }
