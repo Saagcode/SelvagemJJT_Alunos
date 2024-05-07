@@ -84,6 +84,6 @@ app.post("/users/:id", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Servidor Express rodando na porta 3000");
+app.listen(10000, () => {
+  console.log("Servidor Express rodando na porta 10000");
 });

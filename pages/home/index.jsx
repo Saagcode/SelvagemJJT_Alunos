@@ -11,6 +11,8 @@ import kimono_profile_2 from "../../public/images/kimono-profile_2.png";
 import "../media-queries/home_media-queries.css";
 
 function Home() {
+  const [response, setResponse] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     Aos.init();
     const storedSelectedDate = localStorage.getItem("storageSelectedDate");
@@ -25,8 +27,87 @@ function Home() {
     if (newDataClass) {
       setDataClasses(JSON.parse(newDataClass));
     }
-  }, []);
-  const navigate = useNavigate();
+
+    let timeoutId;
+
+    const handleUserActivity = () => {
+      clearTimeout(timeoutId); // Limpa o timeout existente
+      timeoutId = setTimeout(() => {
+        const endSession = setTimeout(() => {
+          navigate("/");
+          Swal.fire({
+            title: "Sessão finalizada.",
+            text: "Faça login novamente para continuar.",
+            icon: "info",
+          });
+        }, 80000);
+        Swal.fire({
+          title: "A sessão será finalizada por inatividade.",
+          text: "Gostaria de continuar a sessão?",
+          icon: "question",
+          showCancelButton: true,
+          confirmButtonColor: "#d33",
+          cancelButtonColor: "#3085d6",
+          confirmButtonText: "Não",
+          cancelButtonText: "Sim",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            setResponse(true); // Define response como true
+            Swal.fire({
+              title: "Sessão finalizada.",
+              text: "Faça login novamente para continuar.",
+              icon: "info",
+            });
+            navigate("/");
+          } else if (result.isDenied) {
+            navigate("/home");
+            clearTimeout(endSession);
+          }
+        });
+      }, 1800000); // Defina o tempo limite para 30 minutos (10000 ms)
+    };
+
+    // Inicia o timeout inicial
+    timeoutId = setTimeout(() => {
+      Swal.fire({
+        title: "A sessão será finalizada por inatividade.",
+        text: "Gostaria de continuar a sessão?",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Não",
+        cancelButtonText: "Sim",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setResponse(true); // Define response como true
+          Swal.fire({
+            title: "Sessão finalizada.",
+            text: "Faça login novamente para continuar.",
+            icon: "info",
+          });
+          navigate("/");
+        } else if (result.isDenied) {
+          navigate("/home");
+          clearTimeout(endSession);
+        }
+      });
+    }, 1800000);
+
+    // Adiciona os event listeners para atividade do usuário
+    window.addEventListener("mousemove", handleUserActivity);
+    window.addEventListener("keydown", handleUserActivity);
+    window.addEventListener("click", handleUserActivity);
+
+    // Remove os event listeners e limpa o timeout quando o componente for desmontado
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("mousemove", handleUserActivity);
+      window.removeEventListener("keydown", handleUserActivity);
+      window.removeEventListener("click", handleUserActivity);
+    };
+  }, [navigate]);
+
   const handleLogout = () => {
     localStorage.removeItem("username");
     navigate("/");
